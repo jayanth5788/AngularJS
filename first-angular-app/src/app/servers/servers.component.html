@@ -15,7 +15,7 @@
     <!-- <timer interval="1000" countdown="100">{{ countdown }}</timer> -->
   </button>
   <p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
-  <!-- <ng-template #noServer>
-    <p>No Server Created</p>
-  </ng-template> -->
+    <ng-template #noServer>
+      <p>No Server Created</p>
+    </ng-template>
   <app-server *ngFor="let server of servers"></app-server>

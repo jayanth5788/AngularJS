@@ -1,0 +1,8 @@
+/* @media (max-width: 500px) {
+  .navbar .navbar-brand .navbar-right {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+} */
