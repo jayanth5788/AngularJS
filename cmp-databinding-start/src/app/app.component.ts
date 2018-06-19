@@ -7,4 +7,28 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   serverElements = [{type: 'server', name: 'Server1', content: 'Just a server content'}];
+
+  onServerCreated(serverData: {serverName: string, serverContent: string}) {
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    });
+  }
+  onBlueprintCreated(blueprintData: {serverName: string, serverContent: string}) {
+    this.serverElements.push({
+        type: 'blueprint',
+        name: blueprintData.serverName,
+        content: blueprintData.serverContent
+      });
+  }
+
+  onChangeFirst() {
+    this.serverElements[0].name = 'Changed';
+    this.serverElements[0].content = 'Changed';
+  }
+
+  onDeleteFirst() {
+    this.serverElements.splice(0, 1);
+  }
 }
