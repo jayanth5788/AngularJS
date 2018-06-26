@@ -33,6 +33,7 @@ const appRoutes: Routes = [
   imports: [
     // RouterModule.forRoot(appRoutes, {useHash: true}),
     RouterModule.forRoot(appRoutes)
+    // git status check
   ],
   exports: [
     RouterModule
